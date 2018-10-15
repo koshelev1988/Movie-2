@@ -1,0 +1,36 @@
+@import "params/smart-grid";
+.container {
+	@include wrapper();
+}
+.row {
+	@include row-flex();
+	justify-content: center;
+}
+.media-product {
+	@include col();
+	@include size(4);
+	@include size-lgXl(4);
+	@include size-sm(8);
+	@include size-xs(16);
+}
+.header {
+	& .logo,
+	& .wrap {
+		@include col();
+	}
+}
+.header-slider {
+	& .slide-bottom {
+		& .title,
+		& .social {
+			@include col();
+		}
+	}
+}
+.menu-nav {
+	& .mobil-menu,
+	& .menu-ul,
+	& .layout {
+		@include  col();
+	}
+}

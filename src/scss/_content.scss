@@ -1,0 +1,8 @@
+@import "params/variables";
+@import "params/mixins";
+.content {
+	padding-left: 0;
+	padding-right: 0;
+	@import "media-product";
+	@import "trends-on-email";
+}

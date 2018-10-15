@@ -1,0 +1,68 @@
+@import "params/variables";
+@import "params/mixins";
+
+.menu-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: $font-size-78px 0 $font-size-56px;
+	& .menu-ul, .menu-ul a, .select, .select, .active {
+		color: $color-tw;
+	}
+	& .menu-ul, & .layout {
+	}
+	& .menu-ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		& .menu-li, .select {
+			letter-spacing: 0.142857142857143em;
+		}
+		& .menu-li {
+			margin-right: 1.714285714285714em;
+			&.active {
+				font-weight: 700;
+				position: relative;
+				padding-bottom: 0.714285714285714em;
+				&::before {
+					content: '';
+					background: $color-tw;
+					-webkit-border-radius: .2rem;
+					-moz-border-radius: .2rem;
+					border-radius: .2rem;
+					bottom: 0;
+					width: 100%;
+					height: $font-size-4px;
+					position: absolute;
+				}
+			}
+		}
+		& .select-li {
+			.select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background: none;
+				border:0;
+				outline: none;
+				&:focus {
+					outline: none;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	& .layout {
+		color: #d6d8d8;
+		& .indicator {
+			margin-left: 0.571428571428571em;
+		}
+	}
+	& .mobil-menu{
+		display: none;
+		& .hamburger {
+			font-size: $font-size-46px;
+		}
+	}
+}

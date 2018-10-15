@@ -1,0 +1,96 @@
+@import "params/variables";
+@import "params/mixins";
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Fira+Sans+Extra+Condensed:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+html {
+	font-size: 10px;
+}
+body {
+	background: #f5f6f6;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 28px;
+	font-weight: 400;
+	min-width: 32rem;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.btn {
+	-webkit-border-radius: $font-size-8px;
+	-moz-border-radius: $font-size-8px;
+	border-radius: $font-size-8px;
+	color: $color-white;
+	display: inline-block;
+	padding: $font-size-20px $font-size-24px;
+	//&.active {
+	//	background-color: $color-tw;
+	//}
+	&:hover {
+		background-color: $color-tw;
+	}
+}
+
+.tags {
+	margin: 1.166666666666667em 0;
+	& .tag, & .delimiter, .time {
+		margin-right: 1.416666666666667em;
+	}
+}
+
+.rating {
+	margin-top: 1.166666666666667em;
+	margin-bottom: 1.083333333333333em;
+	& .indicator, & .result {
+		margin-right: 0.4em;
+	}
+	& .indicator {
+		align-self: center;
+		color: $color-tw;
+	}
+	& .result {
+		color: $color-white;
+		border: .3rem solid $color-tw;
+		-webkit-border-radius: $font-size-6px;
+		-moz-border-radius: $font-size-6px;
+		border-radius: $font-size-6px;
+		line-height: 1.1;
+		padding: 0 0.583333333333333em;
+	}
+}
+
+.favorite {
+	margin-right: 1.285714285714286em;
+}
+
+.all {
+	//background: chartreuse;
+	width: 100%;
+	max-width: 240rem;
+	margin: 0 auto;
+	@import "header";
+	@import "search";
+	@import "header-slider";
+	@import "menu-nav";
+	@import "content";
+	@import "footer";
+}
+
+

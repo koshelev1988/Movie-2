@@ -1,0 +1,49 @@
+@import "params/variables";
+@import "params/mixins";
+.more-details {
+	display: none;
+	background: transparentize($color-black, .3);
+	width: 100%;
+	max-width: $width-500px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: $font-size-40px;
+	position: absolute;
+	& .wrap, .wrap a, .name, .desc {
+		color: $color-white;
+	}
+	& .wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	& > .title-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+		& > .title {
+			& > .name {
+				max-width: 68%;
+				height: 1em;
+				overflow: hidden;
+			}
+		}
+		& .tags {
+			max-width: 84%;
+			overflow: hidden;
+		}
+	}
+	& .desc {
+		display: block;
+		max-height: 40.705882352941176%;
+		font-size: $font-size-26px;
+		line-height: 1.5;
+		overflow: hidden;
+
+	}
+	& .btn {
+		background: $color-tw;
+		display: inline-block;
+		margin-top: $font-size-54px;
+	}
+}
